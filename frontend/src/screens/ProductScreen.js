@@ -17,7 +17,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 
 const ProductScreen = ({ history, match }) => {
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
 
   const dispatch = useDispatch();
 
@@ -53,9 +53,9 @@ const ProductScreen = ({ history, match }) => {
               </ListGroup.Item>
               <ListGroup.Item>
                 <Rating
-                  value={product.rating}
                   text={`${product.numReviews} reviews`}
-                ></Rating>
+                  value={product.rating}
+                />
               </ListGroup.Item>
               <ListGroup.Item>Price: ${product.price} </ListGroup.Item>
               <ListGroup.Item>
